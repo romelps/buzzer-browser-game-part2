@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#127850 Buzzer Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./app.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".buzzer").click(function() {
+                $("#cookie").text("You clicked the buzzer!");
+                $("div").animate({left: "200px", top: "0px"}, fast, linear);
+                $("div").animate({left: "-300px", top: "-200px"}, fast, linear);
+                $("div").animate({left: "-500px", top: "500px"}, slow, linear);
+                $("div").animate({left: "400px", top: "-100px"}, fast, swing);
+                $("div").animate({left: "0px", top: "0px"}, fast, swing)
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Hit the buzzer within 5 seconds to get a cookie!</h1>
+    </header>
+    <div>
+        <button class="buzzer">Buzzer</button>
+    </div>
+    <p id="cookie"></p>
+    <p id="actual-cookie">&#127850</p>
+</body>
+</html>

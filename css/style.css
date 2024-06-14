@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+  }
+
+.buzzer {
+    display: flex;
+    height: 60px;
+    width: 100px;
+    background-color: indigo;
+    border: 10px black;
+    border-radius: 50%;
+    
+    justify-content: center;
+    align-items: center;
+    /* padding: 15px; */
+    color: white;
+    /*margin: 10px; */
+    font-size: 24px;
+    font-family: "Georgia", serif;
+    position: relative;
+
+    /*W3 applying animation*/
+    animation-name: move;
+    animation-duration: 3.5s;
+    animation-delay: 1s;
+}
+
+/*fun stuff when hovering over buzzer*/
+.buzzer:hover {
+  background-color: white;
+  color: purple;
+  border: 20px rgb(106, 21, 122);
+  /*first color is main color underneath button and second is the 'glow'*/
+  box-shadow: 0 10px 15px 0 black, 0 10px 20px 10px blueviolet;/*info found on w3 schools*/
+  
+}
+
+/*animation code with help from w3 schools*/
+@keyframes move {
+  0% {left: 0px; top: 0px;}
+  25% {left: 200px; top: 0px;}
+  50% {left: -300px; top: -200px;}
+  75% {left: -500px; top: 500px;}
+  85% {left: 400px; top: -100px;}
+  100% {left: 0px; top: 0px;}
+}
+
+h1 {
+    font-family: "Georgia", serif;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 3px rgb(212, 11, 61); /*from W3. first num moves to right, sec num moves down, third blurs*/
+} 
+
+body {
+  background: url("https://static.vecteezy.com/system/resources/previews/021/971/025/non_2x/green-soft-pastel-curtain-stage-award-background-trophy-on-green-carpet-pastel-background-generative-ai-free-photo.jpeg") no-repeat center fixed; /*image does not repeat, centered, stays in place and does not change size with the window*/
+  background-size: cover;
+  
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-size: 30px;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 250px auto 80px auto;
+}
+
+@media(max-width: 500px) {
+  body {
+    background: url("https://media.istockphoto.com/id/1223199805/photo/purple-curtains-with-flash-or-spotlight.jpg?s=612x612&w=0&k=20&c=1Me2pp-qRXdXuMRWQ-KeTWBIDxcaHmg0D3Jeipn3bo8=") center fixed; 
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .buzzer {
+    display: flex;
+    height: 60px;
+    width: 100px;
+    background-color: rgb(5, 175, 90);
+    border: 10px black;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-family: "Georgia", serif;
+  }
+  .buzzer:hover {
+    background-color: white;
+    color: rgb(5, 175, 90);
+    border: 20px rgb(228, 163, 44);
+    /*first color is main color underneath button and second is the 'glow'*/
+    box-shadow: 0 10px 15px 0 black, 0 10px 20px 10px rgb(5, 182, 99);/*info found on w3 schools*/
+    
+  }
+}
+
+
